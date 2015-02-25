@@ -1,0 +1,24 @@
+{#<ion-view view-title="Greeters">#}
+{#    <ion-content class="padding">#}
+{#        <ion-list>#}
+{#            <ion-item  ng-repeat="friend in friends">#}
+{#                <img ng-src="{{friend.face}}" style="width: 64px; height: 64px">#}
+{#                <h3>Notes</h3>#}
+{#                <p>#}
+{#                    {{friend.notes}}#}
+{#                </p>#}
+{#            </ion-item>#}
+{#        </ion-list>#}
+{##}
+{#    </ion-content>#}
+{#</ion-view>#}
+<ion-view view-title="Friends">
+    <ion-content>
+        <ion-list>
+            <ion-item class="item-avatar" ng-repeat="friend in friends" type="item-text-wrap" href="#/tab/friend/{{friend.id}}">
+                <img ng-src="{{friend.face}}">
+                <h2>{{friend.name}}</h2>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

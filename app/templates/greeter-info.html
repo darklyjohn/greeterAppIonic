@@ -1,0 +1,30 @@
+<ion-view hide-nav-bar="false" view-title="{{ greeter.name }}">
+    <header-bar
+            title="headerTitle"
+            left-buttons="leftButtons"
+            right-buttons="rightButtons"
+            type="bar-energized"
+            align-title="center">
+    </header-bar>
+
+
+    <ion-content class="padding">
+     <!--   <ion-header-bar class="bar-stable">
+            <ion-nav-back-button></ion-nav-back-button>
+            <h1 class="title">{{ greeter.name }}</h1>
+            <button class="button button-icon ion-pinpoint" ng-click="centerOnMe()"></button>
+        </ion-header-bar>-->
+        <img ng-src="{{greeter.face}}" style="width: 64px; height: 64px">
+        <h3>Notes</h3>
+        <p>
+            {{greeter.notes}}
+        </p>
+        <div class="mapWrap"  data-tap-disabled="true">
+            <map center="43.07493,-89.381388" zoom="15">
+                <!-- ngRepeat: pos in positions -->
+                <marker ng-repeat=" pos in positions" position="{{pos.lat}},{{pos.lng}}"></marker>
+            </map>
+        </div>
+
+    </ion-content>
+</ion-view>
